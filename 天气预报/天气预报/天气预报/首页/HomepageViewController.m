@@ -33,15 +33,11 @@
     [bottomView addSubview:bottomButton];
     [self.view addSubview:bottomView];
     
-    //初始化传值数组
     if(_receiveArray == nil){
         _receiveArray = [[NSMutableArray alloc] init];
     }
     
-    //创建ScrollView
     self.scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 380, 620)];
-
-    //设置scrollView,
     self.scrollview.contentSize = CGSizeMake(_receiveArray.count*self.view.frame.size.width, 0);
     self.scrollview.contentOffset = CGPointMake((self.page)*self.view.frame.size.width, 0);
     self.scrollview.pagingEnabled = YES;//设置滚动视图可以进行分页

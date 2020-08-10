@@ -24,7 +24,6 @@
 
         _array1 = [[NSArray alloc] initWithObjects:@"日出", @"降雨概率", @"风速", @"降雨量", @"能见度", nil];
         _array2 = [[NSArray alloc] initWithObjects:@"日落", @"湿度", @"体感温度", @"气压", @"空气质量", nil];
-        
         if (!_cond_txt) {
             _cond_txt = [[NSString alloc] init];
         }if (!_tmp) {
@@ -373,7 +372,7 @@
             label2.text = self.cond_txt;
             NSString *str = [NSString stringWithFormat:@"%@°",self.tmp];
             label3.text = str;
-            label5.text =@"星期天";
+            label5.text =@"星期一";
             label6.text = self.tmp_max;
             label7.text = self.tmp_min;
             [cell0.contentView addSubview:label1];
@@ -419,39 +418,39 @@
     } else if(indexPath.section == 2){
         FirstTableViewCell *cell2 = [tableView dequeueReusableCellWithIdentifier:@"cell2" forIndexPath:indexPath];
         if (indexPath.row == 0) {
-            cell2.label1.text = @"星期一";
+            cell2.label1.text = @"星期二";
             cell2.label2.text = _tmp_max2;
             cell2.label3.text = _tmp_min2;
             NSString *str = [NSString stringWithFormat:@"%@",_cond_txt_d2];
             cell2.imageViewz.image = [UIImage imageNamed:str];
             
         } else if (indexPath.row == 1) {
-            cell2.label1.text = @"星期二";
+            cell2.label1.text = @"星期三";
             cell2.label2.text = _tmp_max3;
             cell2.label3.text = _tmp_min3;
             NSString *str = [NSString stringWithFormat:@"%@",_cond_txt_d3];
             cell2.imageViewz.image = [UIImage imageNamed:str];
         }else if (indexPath.row == 2){
-            cell2.label1.text = @"星期三";
+            cell2.label1.text = @"星期四";
             cell2.label2.text = _tmp_max4;
             cell2.label3.text = _tmp_min4;
             NSString *str = [NSString stringWithFormat:@"%@",_cond_txt_d4];
             cell2.imageViewz.image = [UIImage imageNamed:str];
         }else if(indexPath.row == 3){
-            cell2.label1.text = @"星期四";
+            cell2.label1.text = @"星期五";
             cell2.label2.text = _tmp_max5;
             cell2.label3.text = _tmp_min5;
             NSString *str = [NSString stringWithFormat:@"%@",_cond_txt_d5];
             cell2.imageViewz.image = [UIImage imageNamed:str];
         }else if (indexPath.row == 4){
-            cell2.label1.text = @"星期五";
+            cell2.label1.text = @"星期六";
             cell2.label2.text = _tmp_max6;
             cell2.label3.text = _tmp_min6;
             NSString *str = [NSString stringWithFormat:@"%@",_cond_txt_d6];
             cell2.imageViewz.image = [UIImage imageNamed:str];
         }
             else{
-            cell2.label1.text = @"星期六";
+            cell2.label1.text = @"星期天";
             cell2.label2.text = _tmp_max7;
             cell2.label3.text = _tmp_min7;
             NSString *str = [NSString stringWithFormat:@"%@",_cond_txt_d7];
@@ -483,7 +482,6 @@
     }
 }
 
-//设置选中Cell的响应事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
